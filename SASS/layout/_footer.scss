@@ -2,21 +2,23 @@ footer{
     width:100%;
     background-color:$colour-background-footer ;
     color:$font-footer-colour;
+    padding: 30px;
         img.footer-logo{
             filter:invert(100%);
             padding: 50px;
-            width: 150px;
+            width: 300px;
             object-fit: cover;
         }
 }
 
 ul.footer{
     list-style: none;
-        .i{
-            padding: 15px;
-        }
-        .li{
-            padding: 10px;
-        }
+    display: flex;
+    flex-direction: column;
+}
+
+a.footer-mail_link {
+    text-decoration: none;
+    color: $font-footer-colour;
 }
 

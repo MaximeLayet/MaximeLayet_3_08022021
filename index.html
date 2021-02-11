@@ -11,20 +11,22 @@
 
 		<header>
 			<!--header avc logo -->
-			<img src="Maquettes_Ohmyfood/images/logo/ohmyfood.png" alt="Logo OhMyFood">
+			<img class="header-logo"src="Maquettes_Ohmyfood/images/logo/ohmyfood.png" alt="Logo OhMyFood">
 		</header>
 		<section>
 			<!--section comprend les 3 div de la page d'accueil-->
-			<div class="introduction">
+			<div class="search">
 				<!--Avec localisation, le h1 h2 et le bouton exploration-->
-				<span class="section-introduction_loc">
-					<p><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
-				</span>
+				<form method="POST" action="traitement.php">
+					<i id="map_marker" class="fas fa-map-marker-alt"></i>                           
+						<input type="text" value="  Paris, Belleville" id="Rechercher">
+			</div>
+			<div class="introduction">
 				<h1>Réservez le menu qui vous convient</h1>
 				<h2>Découvrez des restaurants d'exception, selctionnés par nos soins.</h2>
 				<button class="introduction">Explorer nos restaurants</button>
-
 			</div>
+	
 			<div class="fonctions">
 				<!--Avec un h2(?) et 3 boutons: choose/menu/reservation-->
 				<h2>Fonctionnement</h2>
@@ -40,7 +42,7 @@
 				<!--Avec les 4 "cartes" des restau, avec lien vers les pages menus-->
 				<div class="restaurants--taste">
 					<a href="MenuPaletteGoût.html">
-						<img src="Maquettes_Ohmyfood/images/restaurants/la palette du goût.jpg" alt="la palette du goût">
+						<img src="Maquettes_Ohmyfood/images/restaurants/la_palette_du_goût.jpg" alt="la palette du goût">
 					</a>
 					<p>La palette du goût</p>
 					<p>Ménilmontant</p>
@@ -48,7 +50,7 @@
 				</div>
 				<div class="restaurants--note">
 					<a href="MenuNoteEnchantée.html">
-						<img src="Maquettes_Ohmyfood/images/restaurants/la note enchantée.jpg" alt="la note enchantée">
+						<img src="Maquettes_Ohmyfood/images/restaurants/la_note_enchantée.jpg" alt="la note enchantée">
 					</a>
 					<p>La note enchantée</p>
 					<p>Charonne</p>
@@ -56,7 +58,7 @@
 				</div>
 				<div class="restaurants--french">
 					<a href="MenuALaFrancaise.html">
-						<img src="Maquettes_Ohmyfood/images/restaurants/à la française.jpg" alt="à la française">
+						<img src="Maquettes_Ohmyfood/images/restaurants/à_la_française.jpg" alt="à la française">
 					</a>
 					<p>À la française</p>
 					<p>Cité Rouge</p>
@@ -64,7 +66,7 @@
 				</div>
 				<div class="restaurants--sens">
 					<a href="MenuDeliceSens.html">
-						<img src="Maquettes_Ohmyfood/images/restaurants/le délice des sens.jpg" alt="le délice des sens">
+						<img src="Maquettes_Ohmyfood/images/restaurants/le_délice_des_sens.jpg" alt="le délice des sens">
 					</a>
 					<p>Le délice des sens</p>
 					<p>Folie-Méricourt</p>
@@ -78,12 +80,12 @@
 			<img class="footer-logo" src="Maquettes_Ohmyfood/images/logo/ohmyfood.png" alt="Logo OhMyFood">
 			<nav class="footer">
 				<ul class="footer">
-					<li><i class="fas fa-utensils footer"></i><p>un restaurant</p></li>
-					<li><i class="fas fa-hands-helping footer"></i><p>Devenir partenaire</p></li>
+					<li><i class="fas fa-utensils footer"></i>un restaurant</li>
+					<li><i class="fas fa-hands-helping footer"></i>Devenir partenaire</li>
 				</ul>
 			</nav>
 			<p class="footer">Mentions légales</p>
-			<p class="footer"><a href="mailto:ohmyfood@contact.com">Contact</a></p>
+			<p class="footer-mail"><a class="footer-mail_link" href="mailto:ohmyfood@contact.com">Contact</a></p>
 		</footer>
 	</div>
 </body>

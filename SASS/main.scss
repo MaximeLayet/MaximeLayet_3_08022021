@@ -1,5 +1,13 @@
 @import "./utils/variables";
 @import "./layout/footer";
+@import "./layout/header";
 @import"./utils/mixins";
 
 
+
+div.introduction{
+    background-color: $colour-background-topmain;
+        button.introduction{
+            @include button
+        }
+}
