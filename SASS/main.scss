@@ -4,10 +4,60 @@
 @import"./utils/mixins";
 
 
+div.search{
+    background-color: $colour-background-form;
+    border-top:solid #b4b4b6;
+    margin-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+        form{
+            text-align: center;
+        }
+            input{
+            background-color:$colour-background-form;
+            border: none;
+            font-size: 1rem;
+            }
+}
 
 div.introduction{
     background-color: $colour-background-topmain;
-        button.introduction{
-            @include button
+    padding-top: 20px;
+    padding-bottom: 60px;
+        h1{
+            text-align: center;
+            font-size: 3rem;
         }
+            h2{
+                text-align: center;
+                font-weight: normal;
+            }
+                button.introduction{
+                    @include button
+                }
 }
+
+div.fonctions{
+    ol{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        button{
+            @include button-fonction
+        }
+   
+}
+
+div.restaurants{
+    background-color: $colour-background-topmain;
+    display: flex;
+    flex-direction: column;
+        div.card{
+           @include restau-card
+        }
+            img.pic-card{
+                @include pic-card
+            }
+}
+
