@@ -22,6 +22,7 @@
 @mixin button-fonction {
     background-color: $colour-background-topmain;
     border-radius:0.5rem 0.5rem 0.5rem 0.5rem;
+    box-shadow:0.4em 0.4em 0.4em #dedede;
     border: none;
 }
 

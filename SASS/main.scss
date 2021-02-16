@@ -38,15 +38,22 @@ div.introduction{
 }
 
 div.fonctions{
-    ol{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-        button{
+    padding-bottom: 30px;
+
+        div.fonctions-btn{
+            padding: 10px;
+            margin:30px;
             @include button-fonction
         }
-   
+            span{
+                color: $font-button-colour;
+                padding: 5px;
+                background-color: $colour-primary;
+                border-radius: 100%;
+            }
+                 button{
+                        border: none;
+                    }
 }
 
 div.restaurants{
@@ -59,5 +66,12 @@ div.restaurants{
             img.pic-card{
                 @include pic-card
             }
+}
+
+span.new {
+    color:darken($color: $colour-tertiary, $amount: 30);
+    background-color:$colour-tertiary;
+    padding:0.8rem;
+    border-radius: 0.2rem;
 }
 
