@@ -1,5 +1,5 @@
 @mixin font-text {
-    font-family: "Roboto" , sans-serif;   
+    font-family: "roboto", sans-serif;
 }
 
 @mixin font-title {
@@ -7,7 +7,7 @@
 }
 
 @mixin button {
-    color: $font-button-colour;
+    color: $font-colour-secondary;
     background: linear-gradient($colour-secondary,$colour-primary);
     border: none;
     border-radius: 25px;
@@ -21,7 +21,7 @@
 
 @mixin button-fonction {
     background-color: $colour-background-topmain;
-    border-radius:0.5rem 0.5rem 0.5rem 0.5rem;
+    border-radius:2rem 2rem 2rem 2rem;
     box-shadow:0.4em 0.4em 0.4em #dedede;
     border: none;
 }

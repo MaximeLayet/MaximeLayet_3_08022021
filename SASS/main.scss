@@ -2,11 +2,15 @@
 @import "./layout/footer";
 @import "./layout/header";
 @import"./utils/mixins";
+@import"./layout/_maincard";
 
+#bloc_page{
+    @include font-text;
+}
 
 div.search{
     background-color: $colour-background-form;
-    border-top:solid #b4b4b6;
+    border-top:solid #d3d3d3;
     margin-top: 10px;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -41,18 +45,34 @@ div.fonctions{
     padding-bottom: 30px;
 
         div.fonctions-btn{
-            padding: 10px;
+            position: relative;
+            padding: 40px;
             margin:30px;
-            @include button-fonction
+            @include button-fonction;
+
         }
             span{
-                color: $font-button-colour;
-                padding: 5px;
+                position:absolute;
+                left: -12.5px;
+                top:20px;
+                color: $font-colour-secondary;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-right:9px;
+                padding-left:9px;
                 background-color: $colour-primary;
                 border-radius: 100%;
             }
+             i{
+                 color: #7e7e7e;
+             }
                  button{
                         border: none;
+                        font-weight: bolder;
+                        font-size: 1.5rem;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
                     }
 }
 
@@ -61,10 +81,11 @@ div.restaurants{
     display: flex;
     flex-direction: column;
         div.card{
-           @include restau-card
+           @include restau-card;
+           position:relative;
         }
             img.pic-card{
-                @include pic-card
+                @include pic-card;
             }
 }
 
@@ -73,5 +94,8 @@ span.new {
     background-color:$colour-tertiary;
     padding:0.8rem;
     border-radius: 0.2rem;
+    position: absolute;
+    right: 100px;
+    top:15px;
 }
 
