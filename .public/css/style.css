@@ -41,10 +41,36 @@ img.header-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
+}
+
+div.back_main {
+  color: black;
+  display: flex;
+  position: relative;
+  top: 50px;
+  font-size: 3rem;
 }
 
 h1.title-menu {
   font-family: "Shrikhand", sans-serif;
+}
+
+#bloc_page {
+  font-family: "roboto", sans-serif;
+}
+
+button.command {
+  color: #ffff;
+  background: linear-gradient(#ff79da, #9356dc);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0.4em 0.4em 0.4em #ccc6c6;
+  width: 200px;
+  height: 50px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #bloc_page {
@@ -106,9 +132,10 @@ div.fonctions div.fonctions-btn {
   border: none;
 }
 div.fonctions span {
+  font-size: 1.5rem;
   position: absolute;
   left: -12.5px;
-  top: 20px;
+  top: 55px;
   color: #ffff;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -119,14 +146,15 @@ div.fonctions span {
 }
 div.fonctions i {
   color: #7e7e7e;
+  font-size: 2rem;
+  margin-left: 20px;
+  padding-top: 20px;
 }
 div.fonctions button {
   border: none;
   font-weight: bolder;
-  font-size: 1.5rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 2.5rem;
+  padding-left: 150px;
 }
 
 div.restaurants {
@@ -162,6 +190,27 @@ span.new {
   position: absolute;
   right: 100px;
   top: 15px;
+}
+
+div.name_loc {
+  padding-left: 20px;
+  font-size: 1.8rem;
+}
+div.name_loc .restaurant_name {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+div.name_loc .restaurant_loc {
+  margin-top: 0;
+}
+
+div.heart {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

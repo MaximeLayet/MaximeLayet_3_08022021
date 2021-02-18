@@ -1,3 +1,11 @@
 h1.title-menu{
     @include font-title
 }
+
+#bloc_page{
+    @include font-text;
+}
+
+button.command{
+    @include button;
+}

@@ -52,9 +52,10 @@ div.fonctions{
 
         }
             span{
+                font-size:1.5rem;
                 position:absolute;
                 left: -12.5px;
-                top:20px;
+                top:55px;
                 color: $font-colour-secondary;
                 padding-top: 5px;
                 padding-bottom: 5px;
@@ -65,14 +66,15 @@ div.fonctions{
             }
              i{
                  color: #7e7e7e;
+                 font-size: 2rem;
+                 margin-left: 20px;
+                 padding-top: 20px;
              }
                  button{
                         border: none;
                         font-weight: bolder;
-                        font-size: 1.5rem;
-                        display: block;
-                        margin-left: auto;
-                        margin-right: auto;
+                        font-size: 2.5rem;
+                        padding-left:150px;
                     }
 }
 
@@ -97,5 +99,28 @@ span.new {
     position: absolute;
     right: 100px;
     top:15px;
+}
+
+div.name_loc{
+    padding-left: 20px;
+    font-size: 1.8rem;
+        .restaurant_name{
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+            .restaurant_loc{
+                margin-top: 0;
+            }
+
+       
+}
+
+div.heart{
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
 }
 
