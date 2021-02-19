@@ -58,19 +58,72 @@ h1.title-menu {
 
 #bloc_page {
   font-family: "roboto", sans-serif;
+  width: 100%;
 }
 
 button.command {
   color: #ffff;
   background: linear-gradient(#ff79da, #9356dc);
   border: none;
-  border-radius: 25px;
+  border-radius: 50px;
   box-shadow: 0.4em 0.4em 0.4em #ccc6c6;
-  width: 200px;
-  height: 50px;
+  width: 300px;
+  height: 75px;
   display: block;
   margin-right: auto;
   margin-left: auto;
+  font-size: 1.5rem;
+}
+
+div.picture--menu {
+  object-fit: cover;
+}
+div.picture--menu img {
+  width: 100%;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+  padding-left: 30px;
+}
+h2 span {
+  border-bottom: 5px solid #99e2d0;
+}
+
+div.description {
+  background-color: #ffff;
+  border-radius: 1.5rem;
+  box-shadow: 0.4em 0.4em 0.4em #dedede;
+  width: 325px;
+  margin: 1.5rem;
+  width: 90%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+div.description p.name {
+  font-weight: bold;
+}
+
+div.menu {
+  width: 100%;
+  background-color: #f2f2f2;
+  border-radius: 2rem 2rem 0 0;
+}
+div.menu h1 {
+  font-size: 4rem;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+  padding-left: 30px;
+  padding-right: 50px;
+}
+
+div.button--command {
+  padding-top: 60px;
+  padding-bottom: 100px;
+  size: 75%;
 }
 
 #bloc_page {
@@ -110,13 +163,14 @@ div.introduction button.introduction {
   color: #ffff;
   background: linear-gradient(#ff79da, #9356dc);
   border: none;
-  border-radius: 25px;
+  border-radius: 50px;
   box-shadow: 0.4em 0.4em 0.4em #ccc6c6;
-  width: 200px;
-  height: 50px;
+  width: 300px;
+  height: 75px;
   display: block;
   margin-right: auto;
   margin-left: auto;
+  font-size: 1.5rem;
 }
 
 div.fonctions {

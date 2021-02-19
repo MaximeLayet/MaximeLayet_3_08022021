@@ -4,8 +4,54 @@ h1.title-menu{
 
 #bloc_page{
     @include font-text;
+    width: 100%;
 }
 
 button.command{
     @include button;
+}
+
+div.picture--menu{
+    object-fit: cover;
+        img{
+            width: 100%;
+        }
+}
+
+h2{
+    text-transform: uppercase;
+    font-weight: normal;
+    padding-left:30px;
+        span{
+        @include underline_menu;
+        }
+}
+
+div.description{
+    @include restau-card;
+        p.name{
+            font-weight: bold;
+        }
+}
+
+
+
+div.menu{
+    width: 100%;
+    background-color: $colour-background-topmain;
+    border-radius:2rem 2rem 0 0;
+        h1{
+            font-size: 4rem;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 60px;
+            padding-left: 30px;
+            padding-right: 50px;
+        }   
+}
+
+div.button--command{
+    padding-top: 60px;
+    padding-bottom: 100px;
+    size:75%;
 }
