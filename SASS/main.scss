@@ -37,8 +37,13 @@ div.introduction{
                 font-weight: normal;
             }
                 button.introduction{
-                    @include button
-                }
+                    @include button;
+                    
+                        &:hover{
+                            @include hover-button;
+                            }
+                            }
+                
 }
 
 div.fonctions{
@@ -49,6 +54,9 @@ div.fonctions{
             padding: 40px;
             margin:30px;
             @include button-fonction;
+                &:hover{
+                    @include hover-button;
+                }
 
         }
             span{

@@ -59,6 +59,7 @@ h1.title-menu {
 #bloc_page {
   font-family: "roboto", sans-serif;
   width: 100%;
+  position: relative;
 }
 
 button.command {
@@ -73,6 +74,11 @@ button.command {
   margin-right: auto;
   margin-left: auto;
   font-size: 1.5rem;
+  transition: filter 0.3s 0.15s ease, box-shadow 0.4s;
+}
+button.command:hover {
+  filter: brightness(110%);
+  box-shadow: 0.4em 0.4em 0.4em #4e4545;
 }
 
 div.picture--menu {
@@ -80,6 +86,12 @@ div.picture--menu {
 }
 div.picture--menu img {
   width: 100%;
+}
+
+div.picture--menu {
+  position: absolute;
+  z-index: -1;
+  top: -310px;
 }
 
 h2 {
@@ -101,15 +113,39 @@ div.description {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  position: relative;
 }
 div.description p.name {
+  font-size: 2.5rem;
   font-weight: bold;
+  padding: 30px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+div.description p.precision {
+  font-size: 2rem;
+  padding: 30px;
+  padding-top: 0;
+  margin-top: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+div.description p.price {
+  font-weight: bold;
+  font-size: 2rem;
+  position: absolute;
+  right: 50px;
+  top: 50px;
 }
 
 div.menu {
   width: 100%;
   background-color: #f2f2f2;
-  border-radius: 2rem 2rem 0 0;
+  border-radius: 5rem 5rem 0 0;
 }
 div.menu h1 {
   font-size: 4rem;
@@ -118,6 +154,11 @@ div.menu h1 {
   padding-top: 60px;
   padding-left: 30px;
   padding-right: 50px;
+}
+
+span.validation {
+  color: #99e2d0;
+  background-color: #99e2d0;
 }
 
 div.button--command {
@@ -171,6 +212,11 @@ div.introduction button.introduction {
   margin-right: auto;
   margin-left: auto;
   font-size: 1.5rem;
+  transition: filter 0.3s 0.15s ease, box-shadow 0.4s;
+}
+div.introduction button.introduction:hover {
+  filter: brightness(110%);
+  box-shadow: 0.4em 0.4em 0.4em #4e4545;
 }
 
 div.fonctions {
@@ -184,6 +230,11 @@ div.fonctions div.fonctions-btn {
   border-radius: 2rem 2rem 2rem 2rem;
   box-shadow: 0.4em 0.4em 0.4em #dedede;
   border: none;
+  transition: filter 0.3s 0.15s ease, box-shadow 0.4s;
+}
+div.fonctions div.fonctions-btn:hover {
+  filter: brightness(110%);
+  box-shadow: 0.4em 0.4em 0.4em #4e4545;
 }
 div.fonctions span {
   font-size: 1.5rem;
