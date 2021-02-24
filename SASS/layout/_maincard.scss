@@ -66,9 +66,29 @@ div.description{
                     font-weight: bold;
                     font-size: 2rem;
                     position: absolute;
-                    right:50px;
+                    right:190px;
                     top: 50px;
                 }
+
+                    span.validation{
+                        background: $colour-tertiary;
+                        border-radius: 0 1.5rem 1.5rem 0;
+                        padding:3.3rem;
+                        font-size: 2rem;
+                        position: absolute;
+                        right:0px;
+                        top: 0px;
+                             i{
+                                 font-size: 2.5rem;
+                                 border-radius: 50%;
+                                 background-color: white;
+                                 color: $colour-tertiary;
+                             }
+                             &:not(:last-child){}
+                    }
+                        &:hover{
+                            @include hover-button;
+                        }
 }
 
 div.menu{
@@ -83,11 +103,6 @@ div.menu{
             padding-left: 30px;
             padding-right: 50px;
         }   
-}
-
-span.validation{
-    color: $colour-tertiary;
-    background-color: $colour-tertiary; 
 }
 
 div.button--command{

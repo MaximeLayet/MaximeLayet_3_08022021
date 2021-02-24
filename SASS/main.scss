@@ -8,6 +8,35 @@
     @include font-text;
 }
 
+div.loading{
+        position: absolute;
+        z-index: 1;
+        border: 16px solid $colour-primary;
+        border-radius: 50%;
+        border-top: 16px solid $colour-secondary;
+        border-bottom: 16px solid $colour-primary;
+        border-left: darken($color: $colour-tertiary, $amount: 30);
+        border-right: darken($color: $colour-tertiary, $amount: 30);
+        width: 120px;
+        height: 120px; 
+        animation: loader 1.5s linear infinite;
+      }
+      
+      @keyframes loader {
+        0% { transform: rotate(0deg); }
+        20%{transform: rotate(60deg)}
+        40%{transform: rotate(150deg)}
+        60%{transform: rotate(200deg)}
+        80%{transform: rotate(300deg)}
+        100% { transform: rotate(360deg);}
+
+        0%{opacity: 1;}
+        50%{opacity: 0;}
+        75%{opacity: 0.7;}
+        100%{opacity: 1;}
+      }
+
+
 div.search{
     background-color: $colour-background-form;
     border-top:solid #d3d3d3;
@@ -99,6 +128,15 @@ div.restaurants{
             }
 }
 
+div.heart{
+    &:hover{
+        background:linear-gradient($colour-primary,$colour-secondary);
+        transform: translateY(-50%);
+        transition: transform 1.5s cubic-bezier(0, .75, .10, 1)
+    }
+}
+
+
 span.new {
     color:darken($color: $colour-tertiary, $amount: 30);
     background-color:$colour-tertiary;
@@ -129,7 +167,7 @@ div.heart{
   align-items: center;
   position: absolute;
   right: 50px;
-  bottom: 40px;
-}
+  bottom: 40px;}
+
 
 
