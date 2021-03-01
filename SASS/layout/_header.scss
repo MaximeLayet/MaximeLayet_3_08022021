@@ -7,9 +7,15 @@ img.header-logo{
 }
 
 div.back_main{
-    color: black;
-    display: flex;
     position: relative;
     top: 50px;
+    left: 50px;
     font-size: 3rem;
+            div.picture--menu{
+                padding-top: 150px;
+            }
+                i{
+                    color: black;
+                }
 }
+

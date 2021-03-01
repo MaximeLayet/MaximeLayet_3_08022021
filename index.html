@@ -8,12 +8,12 @@
 </head>
 <body>
     <div id="bloc_page">
-		<div class="loading"></div>
+		<span class="loader"><div class="loading"></div></span>
 		<header>
 			<!--header avc logo -->
 			<img class="header-logo" src="Maquettes_Ohmyfood/images/logo/ohmyfood.png" alt="Logo OhMyFood">
 		</header>
-		<section>
+		<div class="main">
 			<!--section comprend les 3 div de la page d'accueil-->
 			<div class="search">
 				<!--Avec localisation, le h1 h2 et le bouton exploration-->
@@ -43,7 +43,7 @@
 					</div>
 					<div class="fonctions-btn">
 						<span class="number">3</span>
-						<i class="fas fa-store fonctions"></i>
+						<i class="fas fa-store fonctions-last"></i>
 						<button class="fonctions--reservation">Dégustez au restaurant</button>
 					</div>
 			</div>
@@ -62,6 +62,9 @@
 					<div class="heart">
 						<i class="far fa-heart"></i>
 					</div>
+					<div class="full_heart">
+						<i class="fas fa-heart"></i>
+					</div>
 				</div>
 				<div class="card restaurants--note">
 					<a href="MenuNoteEnchantée.html">
@@ -74,7 +77,11 @@
 					</div>
 					<div class="heart">
 						<i class="far fa-heart"></i>
+						<div class="full_heart">
+							<i class="fas fa-heart"></i>
+						</div>
 					</div>
+					
 				</div>
 				<div class="card restaurants--french">
 					<a href="MenuALaFrancaise.html">
@@ -86,6 +93,9 @@
 					</div>
 					<div class="heart">
 						<i class="far fa-heart"></i>
+					</div>
+					<div class="full_heart">
+						<i class="fas fa-heart"></i>
 					</div>
 				</div>
 				<div class="card restaurants--sens">
@@ -99,9 +109,12 @@
 					<div class="heart">
 						<i class="far fa-heart"></i>
 					</div>
+					<div class="full_heart">
+						<i class="fas fa-heart"></i>
+					</div>
 				</div>
 			</div>
-		</section>
+		</div>
 
 		<footer>
 			<!--logo et ul/li, intégrer lien email sur contact-->

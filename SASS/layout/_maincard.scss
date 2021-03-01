@@ -5,30 +5,29 @@ h1.title-menu{
 #bloc_page{
     @include font-text;
     width: 100%;
-    position:relative;
 }
 
 button.command{
     @include button;
         &:hover{
             @include hover-button;
-        }
-        
+        } 
 }
 
+header{
+    position: relative;
+    z-index: -1;
+}
+
+article{
+    margin-top: -190px;
+}
 
 div.picture--menu{
     object-fit: cover;
         img{
             width: 100%;
         }
-}
-
-
-div.picture--menu{
-    position: absolute;
-    z-index: -1;
-    top:-310px;
 }
 
 h2{
@@ -43,6 +42,10 @@ h2{
 div.description{
     @include restau-card;
     position: relative;
+    opacity: 0;
+        &:hover{
+            ~.i{animation: check_ok 0.5s linear 1;}
+        }
         p.name{
             font-size: 2.5rem;
             font-weight: bold;
@@ -69,7 +72,6 @@ div.description{
                     right:190px;
                     top: 50px;
                 }
-
                     span.validation{
                         background: $colour-tertiary;
                         border-radius: 0 1.5rem 1.5rem 0;
@@ -78,18 +80,25 @@ div.description{
                         position: absolute;
                         right:0px;
                         top: 0px;
-                             i{
-                                 font-size: 2.5rem;
-                                 border-radius: 50%;
-                                 background-color: white;
-                                 color: $colour-tertiary;
-                             }
-                             &:not(:last-child){}
+                        animation-fill-mode: forwards;
+                                i{
+                                    font-size: 2.5rem;
+                                    border-radius: 50%;
+                                    color: white;
+                                }
                     }
-                        &:hover{
-                            @include hover-button;
-                        }
 }
+
+@keyframes check_ok{
+    0% { transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+}
+
+@keyframes check_appears{
+    0%{translateX:(0);}
+    100%{translateX:(100);}
+}
+
 
 div.menu{
     width: 100%;
@@ -103,6 +112,34 @@ div.menu{
             padding-left: 30px;
             padding-right: 50px;
         }   
+}
+
+.top{
+    animation: plate 1.2s ease-in 1;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+.mid{
+    animation: plate 1.2s ease-in 1;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.bottom{
+    animation: plate 1.2s ease-in 1;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes plate{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+
+    0%{margin-bottom:-30px;}
+    100%{margin-top: 0px;}
+
+
 }
 
 div.button--command{

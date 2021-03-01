@@ -6,34 +6,41 @@
 
 #bloc_page{
     @include font-text;
+    width: 100%;
 }
 
+
 div.loading{
+        width: 300px;
+        height:300px;;
         position: absolute;
+        top: 500px;
+        right: 350px;
         z-index: 1;
-        border: 16px solid $colour-primary;
+        border: 30px solid $colour-primary;
         border-radius: 50%;
-        border-top: 16px solid $colour-secondary;
-        border-bottom: 16px solid $colour-primary;
-        border-left: darken($color: $colour-tertiary, $amount: 30);
-        border-right: darken($color: $colour-tertiary, $amount: 30);
-        width: 120px;
-        height: 120px; 
-        animation: loader 1.5s linear infinite;
+        border-top: 30px solid $colour-secondary;
+        border-bottom:50px solid $colour-primary;
+        border-left: $colour-tertiary;
+        border-right: $colour-tertiary;
+        animation: loader 1.5s linear 1;
+        animation-fill-mode: forwards;
       }
       
       @keyframes loader {
-        0% { transform: rotate(0deg); }
+        0% { transform: rotate(0deg);}
         20%{transform: rotate(60deg)}
         40%{transform: rotate(150deg)}
         60%{transform: rotate(200deg)}
         80%{transform: rotate(300deg)}
         100% { transform: rotate(360deg);}
 
-        0%{opacity: 1;}
+        0%{opacity: 0;}
+        1%{opacity: 1;}
+        25%{opacity: 0.6;}
         50%{opacity: 0;}
-        75%{opacity: 0.7;}
-        100%{opacity: 1;}
+        85%{opacity: 1;}
+        100%{opacity: 0;} 
       }
 
 
@@ -101,18 +108,25 @@ div.fonctions{
                 background-color: $colour-primary;
                 border-radius: 100%;
             }
-             i{
-                 color: #7e7e7e;
-                 font-size: 2rem;
-                 margin-left: 20px;
-                 padding-top: 20px;
-             }
-                 button{
-                        border: none;
-                        font-weight: bolder;
-                        font-size: 2.5rem;
-                        padding-left:150px;
+                i{
+                    color: #7e7e7e;
+                    font-size: 2rem;
+                    margin-left: 20px;
+                    padding-top: 20px;
+                }
+                    i.fonctions-last{
+                    color: $colour-primary;
+                    font-size: 2rem;
+                    margin-left: 20px;
+                    padding-top: 20px
                     }
+            
+                        button{
+                                border: none;
+                                font-weight: bolder;
+                                font-size: 2.5rem;
+                                padding-left:150px;
+                            }
 }
 
 div.restaurants{
@@ -127,15 +141,6 @@ div.restaurants{
                 @include pic-card;
             }
 }
-
-div.heart{
-    &:hover{
-        background:linear-gradient($colour-primary,$colour-secondary);
-        transform: translateY(-50%);
-        transition: transform 1.5s cubic-bezier(0, .75, .10, 1)
-    }
-}
-
 
 span.new {
     color:darken($color: $colour-tertiary, $amount: 30);
@@ -156,9 +161,7 @@ div.name_loc{
         }
             .restaurant_loc{
                 margin-top: 0;
-            }
-
-       
+            }   
 }
 
 div.heart{
@@ -168,6 +171,27 @@ div.heart{
   position: absolute;
   right: 50px;
   bottom: 40px;}
+
+div.full_heart{
+    font-size:3rem;
+    display:flex;
+    align-items:center;
+    position:absolute;
+    right:50px;
+    bottom:40px;
+    z-index: -1;
+            &:hover{
+                position: absolute;
+                z-index: 1;
+                color: $colour-secondary;
+                animation: fh 1.5s ease-in infinite;
+            }
+}
+
+@keyframes fh{
+   0%{transform:translateY(0);}
+   100%{transform: translateY(1);}
+}
 
 
 
