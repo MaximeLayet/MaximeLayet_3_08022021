@@ -121,10 +121,6 @@ div.description {
   margin-right: auto;
   margin-left: auto;
   position: relative;
-  opacity: 0;
-}
-div.description:hover ~ .i {
-  animation: check_ok 0.5s linear 1;
 }
 div.description p.name {
   font-size: 2.5rem;
@@ -152,7 +148,8 @@ div.description p.price {
   right: 190px;
   top: 50px;
 }
-div.description span.validation {
+
+span.validation {
   background: #99e2d0;
   border-radius: 0 1.5rem 1.5rem 0;
   padding: 3.3rem;
@@ -160,12 +157,18 @@ div.description span.validation {
   position: absolute;
   right: 0px;
   top: 0px;
-  animation-fill-mode: forwards;
+  overflow: hidden;
 }
-div.description span.validation i {
+span.validation:hover {
+  animation: check_appears 0.5 linear 1;
+}
+span.validation i {
   font-size: 2.5rem;
   border-radius: 50%;
   color: white;
+}
+span.validation i:hover {
+  animation: check_ok 0.5s linear 1;
 }
 
 @keyframes check_ok {
@@ -178,10 +181,12 @@ div.description span.validation i {
 }
 @keyframes check_appears {
   0% {
-    translateX: 0;
+    margin-left: 100%;
+    width: 300%;
   }
   100% {
-    translateX: 100;
+    margin-left: 0%;
+    width: 100%;
   }
 }
 div.menu {
@@ -200,19 +205,19 @@ div.menu h1 {
 
 .top {
   animation: plate 1.2s ease-in 1;
-  animation-delay: 0.1s;
+  animation-delay: 0.2s;
   animation-fill-mode: forwards;
 }
 
 .mid {
   animation: plate 1.2s ease-in 1;
-  animation-delay: 0.2s;
+  animation-delay: 0.3s;
   animation-fill-mode: forwards;
 }
 
 .bottom {
   animation: plate 1.2s ease-in 1;
-  animation-delay: 0.3s;
+  animation-delay: 0.4s;
   animation-fill-mode: forwards;
 }
 
@@ -242,6 +247,7 @@ div.button--command {
 }
 
 div.loading {
+  background: linear-gradient(#9356dc, #ff79da);
   width: 300px;
   height: 300px;
   position: absolute;
@@ -251,9 +257,9 @@ div.loading {
   border: 30px solid #9356dc;
   border-radius: 50%;
   border-top: 30px solid #ff79da;
-  border-bottom: 50px solid #9356dc;
-  border-left: #99e2d0;
-  border-right: #99e2d0;
+  border-bottom: 60px solid #9356dc;
+  border-left: 15px solid #99e2d0;
+  border-right: 20px solid #99e2d0;
   animation: loader 1.5s linear 1;
   animation-fill-mode: forwards;
 }
@@ -269,7 +275,7 @@ div.loading {
     transform: rotate(150deg);
   }
   60% {
-    transform: rotate(200deg);
+    transform: rotate(250deg);
   }
   80% {
     transform: rotate(300deg);
@@ -456,22 +462,22 @@ div.full_heart {
   position: absolute;
   right: 50px;
   bottom: 40px;
-  z-index: -1;
+  opacity: 0;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation-name: f_heart;
 }
 div.full_heart:hover {
-  position: absolute;
-  z-index: 1;
-  color: #ff79da;
-  animation: fh 1.5s ease-in infinite;
+  opacity: 1;
+  transition: 0.2s ease-in;
+}
+div.full_heart:hover + div.heart {
+  opacity: 0;
 }
 
-@keyframes fh {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(1);
-  }
-}
+@keyframes f_heart {}
+/*Partie Responsive*/
 
 /*# sourceMappingURL=style.css.map */

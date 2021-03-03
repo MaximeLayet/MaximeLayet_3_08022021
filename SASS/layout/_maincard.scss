@@ -42,52 +42,51 @@ h2{
 div.description{
     @include restau-card;
     position: relative;
-    opacity: 0;
-        &:hover{
-            ~.i{animation: check_ok 0.5s linear 1;}
-        }
-        p.name{
-            font-size: 2.5rem;
-            font-weight: bold;
-            padding: 30px;
-            padding-bottom: 0;
-            margin-bottom: 0;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-            p.precision{
-                font-size: 2rem;
+            p.name{
+                font-size: 2.5rem;
+                font-weight: bold;
                 padding: 30px;
-                padding-top: 0;
-                margin-top: 0;
+                padding-bottom: 0;
+                margin-bottom: 0;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 white-space: nowrap;
             }
-                p.price{
-                    font-weight: bold;
+                p.precision{
                     font-size: 2rem;
-                    position: absolute;
-                    right:190px;
-                    top: 50px;
+                    padding: 30px;
+                    padding-top: 0;
+                    margin-top: 0;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
                 }
-                    span.validation{
-                        background: $colour-tertiary;
-                        border-radius: 0 1.5rem 1.5rem 0;
-                        padding:3.3rem;
+                    p.price{
+                        font-weight: bold;
                         font-size: 2rem;
                         position: absolute;
-                        right:0px;
-                        top: 0px;
-                        animation-fill-mode: forwards;
-                                i{
-                                    font-size: 2.5rem;
-                                    border-radius: 50%;
-                                    color: white;
-                                }
-                    }
+                        right:190px;
+                        top: 50px;
+                  }                  
 }
+
+span.validation{
+    background: $colour-tertiary;
+    border-radius: 0 1.5rem 1.5rem 0;
+    padding:3.3rem;
+    font-size: 2rem;
+    position: absolute;
+    right:0px;
+    top: 0px;
+    overflow: hidden;
+        &:hover{animation: check_appears 0.5 linear 1;}
+            i{
+                font-size: 2.5rem;
+                border-radius: 50%;
+                color: white;
+                        &:hover{animation: check_ok 0.5s linear 1;}
+               }  
+            }                
 
 @keyframes check_ok{
     0% { transform: rotate(0deg);}
@@ -95,10 +94,12 @@ div.description{
 }
 
 @keyframes check_appears{
-    0%{translateX:(0);}
-    100%{translateX:(100);}
+    0% {  margin-left: 100%;
+          width: 300%;}
+   
+     100% {margin-left: 0%;
+           width: 100%; }
 }
-
 
 div.menu{
     width: 100%;
@@ -116,19 +117,19 @@ div.menu{
 
 .top{
     animation: plate 1.2s ease-in 1;
-    animation-delay: 0.1s;
+    animation-delay: 0.2s;
     animation-fill-mode: forwards;
 }
 
 .mid{
     animation: plate 1.2s ease-in 1;
-    animation-delay: 0.2s;
+    animation-delay: 0.3s;
     animation-fill-mode: forwards;
 }
 
 .bottom{
     animation: plate 1.2s ease-in 1;
-    animation-delay: 0.3s;
+    animation-delay: 0.4s;
     animation-fill-mode: forwards;
 }
 
@@ -138,8 +139,6 @@ div.menu{
 
     0%{margin-bottom:-30px;}
     100%{margin-top: 0px;}
-
-
 }
 
 div.button--command{

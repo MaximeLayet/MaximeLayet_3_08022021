@@ -11,8 +11,9 @@
 
 
 div.loading{
+        background:linear-gradient($colour-primary, $colour-secondary);
         width: 300px;
-        height:300px;;
+        height:300px;
         position: absolute;
         top: 500px;
         right: 350px;
@@ -20,9 +21,9 @@ div.loading{
         border: 30px solid $colour-primary;
         border-radius: 50%;
         border-top: 30px solid $colour-secondary;
-        border-bottom:50px solid $colour-primary;
-        border-left: $colour-tertiary;
-        border-right: $colour-tertiary;
+        border-bottom:60px solid $colour-primary;
+        border-left: 15px solid $colour-tertiary;
+        border-right:20px solid $colour-tertiary;
         animation: loader 1.5s linear 1;
         animation-fill-mode: forwards;
       }
@@ -31,9 +32,9 @@ div.loading{
         0% { transform: rotate(0deg);}
         20%{transform: rotate(60deg)}
         40%{transform: rotate(150deg)}
-        60%{transform: rotate(200deg)}
+        60%{transform: rotate(250deg)}
         80%{transform: rotate(300deg)}
-        100% { transform: rotate(360deg);}
+        100% {transform: rotate(360deg);}
 
         0%{opacity: 0;}
         1%{opacity: 1;}
@@ -170,7 +171,9 @@ div.heart{
   align-items: center;
   position: absolute;
   right: 50px;
-  bottom: 40px;}
+  bottom: 40px;
+            
+}
 
 div.full_heart{
     font-size:3rem;
@@ -179,19 +182,28 @@ div.full_heart{
     position:absolute;
     right:50px;
     bottom:40px;
-    z-index: -1;
-            &:hover{
-                position: absolute;
-                z-index: 1;
-                color: $colour-secondary;
-                animation: fh 1.5s ease-in infinite;
+    opacity: 0;
+    background: linear-gradient($colour-primary, $colour-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation-name: f_heart;
+          &:hover{
+                opacity: 1;
+                transition: 0.2s ease-in;
+                + div.heart{opacity: 0;}
             }
 }
 
-@keyframes fh{
-   0%{transform:translateY(0);}
-   100%{transform: translateY(1);}
+@keyframes f_heart{
+    0%{}
 }
+
+
+/*Partie Responsive*/
+
+
+
 
 
 
