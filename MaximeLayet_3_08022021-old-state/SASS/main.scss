@@ -26,6 +26,15 @@ span.loading{
         border-right:20px solid $colour-tertiary;
         animation: loader 1.5s linear 1;
         animation-fill-mode: forwards;
+              @media (min-width:768px) {
+            top: 350px;
+            right: 300px;
+            }
+            @media (min-width:1024px){
+            top: 315px;
+            right: 415px;
+            
+            }
       }
       
       @keyframes loader {
@@ -67,7 +76,6 @@ span.loading{
         99%{z-index: 1;}
         100%{z-index: -1;}
     }
-
 
 div.search{
     @include font-text;
@@ -118,8 +126,7 @@ h2.main{
 }
 
 div.fonctions{
-    padding-bottom: 30px;
-
+    padding-bottom: 30px;  
         div.fonctions-btn{
             position: relative;
             padding: 10px;
@@ -128,6 +135,13 @@ div.fonctions{
                 &:hover{
                     @include hover-button;
                 }
+                    @media (min-width:768px){
+                        display: inline-block;
+                        width: 25%;
+                    }
+                    @media (min-width:1024px){
+                        padding: 15px;
+                    }
 
         }
             span{
@@ -142,15 +156,41 @@ div.fonctions{
                 padding-left:6px;
                 background-color: $colour-primary;
                 border-radius: 100%;
+                    @media (min-width:768px){
+                        font-size: 1rem;
+                        padding-top: 2px;
+                        top: 30px;
+                    }
+                    @media (min-width:1024px){
+                        top: 15px;
+                    }
             }
                 i{
                     color: #7e7e7e;
                     font-size: 1rem;
                     margin-left: 15px;
+                         @media (min-width:768px){
+                             font-size: 1.3rem;
+                             margin-top: 15px;
+                             position: absolute;
+                             top: 20px;
+                         }
+                            @media (min-width:1024px){
+                                margin-top: 0px;
+                            }
                 }
                     i.fonctions-last{
                     color: $colour-primary;
                     font-size: 1rem;
+                        @media (min-width:768px){
+                            font-size: 1.3rem;
+                            margin-top: 15px;
+                            position: absolute;
+                            top: 20px;
+                        }
+                            @media (min-width:1024px){
+                                margin-top: 0px;
+                            }
                     }
             
                         button{
@@ -160,7 +200,9 @@ div.fonctions{
                                 padding-left:30px;
                                 padding-top: 10px;
                                 padding-bottom:10px;
-                                
+                                    @media (min-width:1024px){
+                                       padding-left:50px;
+                                    }
                             }
 }
 
@@ -175,6 +217,13 @@ div.restaurants{
             img.pic-card{
                 @include pic-card;
             }
+}
+
+div.bloc_card{
+    @media (min-width:768px){
+        display: flex;
+        padding: 1.5rem;
+    }
 }
 
 span.new {
