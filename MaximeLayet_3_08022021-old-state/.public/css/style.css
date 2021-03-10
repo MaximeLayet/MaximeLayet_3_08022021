@@ -129,6 +129,7 @@ div.description p.name {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  width: 70%;
 }
 div.description p.precision {
   font-size: 0.9rem;
@@ -198,7 +199,7 @@ div.menu {
   border-radius: 5rem 5rem 0 0;
 }
 div.menu h1 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   display: flex;
   justify-content: space-between;
   padding-top: 50px;
